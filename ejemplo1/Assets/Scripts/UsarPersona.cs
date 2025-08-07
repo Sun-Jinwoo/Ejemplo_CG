@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using PakagePersona;
 using UnityEngine;
-
+//using TMPro;
 public class UsarPersona : MonoBehaviour
 {
     List<Estudiante> ListaE= new List<Estudiante>();
+    //public TMP_InputField Namstuden;
     // Start is called before the first frame update
     void Start()
     {
