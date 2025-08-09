@@ -29,9 +29,10 @@ namespace PakagePersona
             {
                 EstudianteList lista = new EstudianteList { estudiantes = estudiantes };
                 string json = JsonUtility.ToJson(lista, true);
-                string ruta = Path.Combine(Application.persistentDataPath, nombreArchivo);
-                File.WriteAllText(ruta, json);
-                Debug.Log($"Archivo JSON de estudiantes guardado en: {ruta}");
+                string folderPath = Application.streamingAssetsPath;
+                //string ruta = Path.Combine(Application.persistentDataPath, nombreArchivo);
+                File.WriteAllText(folderPath, json);
+                Debug.Log($"Archivo JSON de estudiantes guardado en: {folderPath}");
             }
             catch (Exception ex)
             {
@@ -46,9 +47,10 @@ namespace PakagePersona
             {
                 Punto2DList lista = new Punto2DList { puntos = puntos };
                 string json = JsonUtility.ToJson(lista, true);
-                string ruta = Path.Combine(Application.persistentDataPath, nombreArchivo);
-                File.WriteAllText(ruta, json);
-                Debug.Log($"Archivo JSON de puntos guardado en: {ruta}");
+                string folderPath = Application.streamingAssetsPath;
+                //string ruta = Path.Combine(Application.persistentDataPath, nombreArchivo);
+                File.WriteAllText(folderPath, json);
+                Debug.Log($"Archivo JSON de puntos guardado en: {folderPath}");
             }
             catch (Exception ex)
             {
